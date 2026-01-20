@@ -53,8 +53,11 @@ body {
 
 .profile-photo {
     width: 100%;
-    border-radius: 40px;
+    max-height: 250px;
+    border-radius: 20px;
     object-fit: cover;
+    object-position: top;
+    
 }
 
 .profile-info h1 {
@@ -160,3 +163,4 @@ body {
     align-items: center;
     font-size: 24px;
 }
+
