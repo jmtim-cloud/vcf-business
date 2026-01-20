@@ -18,7 +18,7 @@ body {
     position: relative;
     /* Menggunakan background image dengan efek blur seperti di gambar */
     background: linear-gradient(rgba(13, 110, 122, 0.8), rgba(13, 110, 122, 0.8)), 
-                url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80');
+                url('images/bg.png');
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -40,7 +40,7 @@ body {
 /* Profile Card */
 .profile-card {
     background: #083d47; /* Biru gelap pada kartu */
-    border-radius: 40px;
+    border-radius: 30px;
     padding: 0 0 30px 0;
     text-align: center;
     margin-bottom: 30px;
@@ -48,12 +48,11 @@ body {
 }
 
 .photo-wrapper {
-    padding: 20px;
 }
 
 .profile-photo {
     width: 100%;
-    max-height: 250px;
+    aspect-ratio: 1 / 1;
     border-radius: 20px;
     object-fit: cover;
     object-position: top;
@@ -163,4 +162,5 @@ body {
     align-items: center;
     font-size: 24px;
 }
+
 
