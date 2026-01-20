@@ -190,8 +190,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;              /* Ukuran lebar lingkaran */
-    height: 50px;             /* Ukuran tinggi lingkaran */
+    width: 60px;              /* Ukuran lebar lingkaran */
+    height: 60px;             /* Ukuran tinggi lingkaran */
     border-radius: 50%;       /* Membuat bentuk lingkaran sempurna */
     background-color: #00a89e; /* Warna hijau teal sesuai brand JMT */
     color: white;             /* Warna ikon */
@@ -209,6 +209,7 @@ body {
 .btn-langsung a[href*="wa.me"] {
     background-color: #25D366; 
 }*/
+
 
 
 
