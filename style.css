@@ -10,18 +10,23 @@ body {
     display: flex;
     justify-content: center;
     min-height: 100vh;
+	    /* Menggunakan background image dengan efek blur seperti di gambar */
+    background: url('images/bg.png');
+    /*background-size: cover;*/
+    background-position: center;
+    padding: 30px;
+    color: white;
+	/* INI KUNCINYA AGAR DIAM */
+    background-attachment: fixed; 
+    
+    /* Tambahan agar background tidak berulang jika konten sangat panjang */
+    background-repeat: no-repeat;
 }
 
 .main-wrapper {
     width: 100%;
     max-width: 450px;
     position: relative;
-    /* Menggunakan background image dengan efek blur seperti di gambar */
-    background: url('images/bg.png');
-    background-size: cover;
-    background-position: center;
-    padding: 30px;
-    color: white;
 }
 
 /* Logo */
@@ -32,27 +37,32 @@ body {
 }
 
 .main-logo {
-    max-width: 180px;
+    max-width: 130px;
 }
 
 /* Profile Card */
 .profile-card {
-    background: #083d47; /* Biru gelap pada kartu */
     border-radius: 30px;
     padding: 0 0 30px 0;
     text-align: center;
     margin-bottom: 30px;
+	overflow: hidden;
 }
 
 .photo-wrapper {
+	padding: 0;                /* Menghilangkan jarak antara foto dan kotak biru */
+    background: transparent;   /* Memastikan tidak ada warna yang "mengintip" */
+    overflow: hidden;
 }
 
 .profile-photo {
     width: 100%;
     max-height: 350px;
-    border-radius: 20px;
     object-fit: cover;
     object-position: top;
+	border: none !important;    /* Menghapus garis border */
+    box-shadow: none !important; /* Menghapus bayangan tipis di pinggir */
+    display: block;             /* Menghilangkan celah kecil di bawah gambar */
     
 }
 
@@ -63,7 +73,10 @@ body {
 }
 
 .profile-info {
-    padding-top: 10px;
+    padding-top: 20px;
+	padding-bottom: 26px;
+	background: #083d47;
+    border-radius: 0px 0px 30px 30px;
 }
 .profile-info p {
     font-size: 16px;
@@ -96,7 +109,6 @@ body {
 .contact-item label {
     display: block;
     font-size: 16px;
-    font-weight: 600;
     margin-bottom: 5px;
 }
 
@@ -109,26 +121,30 @@ body {
 
 /* Buttons */
 .btn-direction {
-    display: inline-flex;
+    display: flex;           /* Berubah dari inline-flex */
     align-items: center;
+    justify-content: center; /* Teks & ikon di tengah tombol */
     gap: 10px;
     background: #00a89e;
     color: white;
     text-decoration: none;
     padding: 12px 25px;
     border-radius: 30px;
-    float: right;
-    font-weight: 600;
-    margin-bottom: 40px;
+    margin: 0 auto 20px auto; /* KUNCI: auto kiri & kanan membuat elemen ke tengah */
+    width: fit-content;      /* Tombol selebar kontennya saja */
 }
 
-.footer-row {
+.footer-row, .website {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    clear: both;
+    flex-direction: column;  /* Menyusun website-link dan tombol secara vertikal */
+    align-items: center;     /* Semua isi di tengah secara horizontal */
+    gap: 20px;               /* Jarak antara link website dan tombol */
     margin-top: 20px;
+	margin-bottom: 20px;
+    clear: both;
 }
+
+
 
 .website-link {
     color: white;
@@ -146,7 +162,6 @@ body {
     text-decoration: none;
     padding: 8px 8px 8px 20px;
     border-radius: 40px;
-    font-weight: 600;
     font-size: 14px;
 }
 
@@ -161,7 +176,6 @@ body {
     align-items: center;
     font-size: 24px;
 }
-
 
 
 
